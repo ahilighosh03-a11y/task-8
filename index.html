@@ -6,54 +6,49 @@
     <title>Thala 7 - Sneaker Store</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="li.css">
 </head>
 <body>
 
-
+    
     <header class="navbar">
-        <a href="#landing-view" class="nav-logo">
-            <span>Thala 7<span class="dot">.</span></span></a>
-
+        <div class="nav-logo" onclick="navigateTo('landing')">
+            <span>Thala 7<span class="dot">.</span></span>
+        </div>
         <nav class="nav-menu">
             <ul>
-                <li><a href="#landing-view">Home</a></li>
-                <li><a href="#product-view">Shop</a></li>
-                <li><a href="#cart-view">Cart</a></li>
-                <li><a href="#payment-view">Checkout</a></li>
+                <li><a href="#" onclick="navigateTo('landing')">Home</a></li>
+                <li><a href="#" onclick="navigateTo('product')">Shop</a></li>
+                <li><a href="#" onclick="navigateTo('cart')">Cart</a></li>
+                <li><a href="#" onclick="navigateTo('payment')">Checkout</a></li>
             </ul>
-
-
         </nav>
         <div class="nav-actions">
             <i class="fa-solid fa-magnifying-glass action-icon"></i>
-            <a href="#cart-view" class="cart-icon-container">
+            <div class="cart-icon-container" onclick="navigateTo('cart')">
                 <i class="fa-solid fa-bag-shopping action-icon"></i>
                 <span class="cart-count">3</span>
-            </a>
+            </div>
             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=60" alt="Profile" class="profile-pic">
         </div>
     </header>
 
-    <main>
-        
-        <section id="landing-view" class="view-section">
+    <main id="app-container">
+    
+        <section id="landing-view" class="view-section active">
             <div class="hero-section">
                 <div class="hero-left">
                     <span class="brand-sub">S E V E N</span>
                     <h1>7!! Thala For<br>a <span class="highlight">Reason!</span></h1>
                     <p>Lorem ipsum dolor sit amet consectetur. Pretium quisque lorem feugiat justo at ut orci nisi. Designed to provide unmatched agility and athletic precision.</p>
-                    <a href="#product-view" class="cta-btn">Shop Now</a>
+                    <button class="cta-btn" onclick="navigateTo('product')">Shop Now</button>
                 </div>
-
-
                 <div class="hero-right">
                     <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&auto=format&fit=crop&q=80" alt="Featured Sneaker" class="hero-sneaker">
                     <div class="badge-icon">A</div>
                 </div>
             </div>
-            
+            <!-- Service Overview Section (Outside main container, full width) -->
             <div class="service-overview">
                 <div class="service-container">
                     <div class="service-item">
@@ -63,8 +58,6 @@
                             <p>Reviews</p>
                         </div>
                     </div>
-
-
                     <div class="service-item">
                         <i class="fa-solid fa-users"></i>
                         <div>
@@ -72,17 +65,13 @@
                             <p>Customers</p>
                         </div>
                     </div>
-
-
                     <div class="service-item">
                         <i class="fa-regular fa-star"></i>
                         <div>
                             <h3>High</h3>
                             <p>Quality</p>
                         </div>
-                     </div>
-
-
+                    </div>
                     <div class="service-item">
                         <i class="fa-solid fa-ranking-star"></i>
                         <div>
@@ -94,16 +83,15 @@
             </div>
         </section>
 
+
         
         <section id="product-view" class="view-section">
             <div class="product-container">
                 <div class="product-left">
                     <div class="main-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&auto=format&fit=crop&q=80" alt="Main Sneaker Display">
+                        <img id="main-product-img" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&auto=format&fit=crop&q=80" alt="Main Sneaker Display">
                     </div>
                 </div>
-
-
                 <div class="product-right">
                     <nav class="breadcrumb">Home > THALA FOR A REASON > Seven By M.S.Dhoni</nav>
                     <h1 class="product-title">Seven By M.S.Dhoni Women's Hogun Multi-Color Running Shoes</h1>
@@ -111,40 +99,50 @@
                     
                     <div class="price-container">
                         <span class="price">₹1,334</span>
+
+
+
                         <span class="discount-tag">Save 12%</span>
                     </div>
                     <p class="taxes-label">Inclusive of all Taxes</p>
 
                     <div class="purchase-actions">
                         <div class="quantity-selector">
-                            <a href="#" class="qty-btn">-</a>
-                            <span>2</span>
-                            <a href="#" class="qty-btn">+</a>
+                            <button onclick="changeQty(-1)">-</button>
+                            <span id="qty-value">2</span>
+                            <button onclick="changeQty(1)">+</button>
                         </div>
-                        <a href="#cart-view" class="add-to-cart-btn">
+                        <button class="add-to-cart-btn" onclick="navigateTo('cart')">
                             <i class="fa-solid fa-cart-shopping"></i> ADD TO CART
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
 
             
-
             <div class="bottom-gallery-section">
+
+
+
                 <h3>More Views</h3>
                 <div class="scrolling-container">
-                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=300&auto=format&fit=crop&q=60" alt="View 1" class="gallery-thumb active">
-                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&auto=format&fit=crop&q=60" alt="View 2" class="gallery-thumb">
-                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&auto=format&fit=crop&q=60" alt="View 3" class="gallery-thumb">
-                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&auto=format&fit=crop&q=60" alt="View 4" class="gallery-thumb">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=300&auto=format&fit=crop&q=60" alt="View 1" class="gallery-thumb active" onclick="updateMainImage(this.src)">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&auto=format&fit=crop&q=60" alt="View 2" class="gallery-thumb" onclick="updateMainImage(this.src)">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&auto=format&fit=crop&q=60" alt="View 3" class="gallery-thumb" onclick="updateMainImage(this.src)">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&auto=format&fit=crop&q=60" alt="View 4" class="gallery-thumb" onclick="updateMainImage(this.src)">
                 </div>
             </div>
         </section>
 
+
     
         <section id="cart-view" class="view-section">
+
+
+
             <h1 class="section-title">Shopping Cart</h1>
             <div class="cart-grid">
+                
                 <div class="cart-left">
                     <table class="cart-table">
                         <thead>
@@ -163,9 +161,32 @@
                                 </td>
                                 <td>
                                     <div class="table-qty">
-                                        <a href="#" class="qty-btn">-</a>
+                                        <button>-</button>
                                         <span>1</span>
-                                        <a href="#" class="qty-btn">+</a>
+                                        <button>+</button>
+                                    </div>
+
+
+                                </td>
+                                <td class="table-price">₹4,999</td>
+                                <td><i class="fa-solid fa-xmark remove-icon"></i></td>
+                            </tr>
+                            <tr>
+
+
+
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&auto=format&fit=crop&q=60" alt="Cart item">
+                                    <span>Seven By M.S.Dhoni W...</span>
+                                </td>
+                                <td>
+
+
+
+                                    <div class="table-qty">
+                                        <button>-</button>
+                                        <span>1</span>
+                                        <button>+</button>
                                     </div>
                                 </td>
                                 <td class="table-price">₹4,999</td>
@@ -173,28 +194,35 @@
                             </tr>
                             <tr>
                                 <td class="product-cell">
-                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&auto=format&fit=crop&q=60" alt="Cart item">
+                                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=100&auto=format&fit=crop&q=60" alt="Cart item">
                                     <span>Seven By M.S.Dhoni W...</span>
                                 </td>
                                 <td>
                                     <div class="table-qty">
-                                        <a href="#" class="qty-btn">-</a>
+                                        <button>-</button>
                                         <span>1</span>
-                                        <a href="#" class="qty-btn">+</a>
+                                        <button>+</button>
                                     </div>
                                 </td>
+
+
+
                                 <td class="table-price">₹4,999</td>
                                 <td><i class="fa-solid fa-xmark remove-icon"></i></td>
                             </tr>
                         </tbody>
                     </table>
+
+
+
                     <div class="bottom-container">
-                        <a href="#product-view" class="continue-shopping">
+                        <a href="#" class="continue-shopping" onclick="navigateTo('product')">
                             <i class="fa-solid fa-chevron-left"></i> Continue Shopping
                         </a>
                     </div>
                 </div>
 
+                
                 <div class="cart-right">
                     <div class="summary-card">
                         <label for="cart-coupon">Enter Coupon Code</label>
@@ -209,20 +237,30 @@
                             <hr>
                             <div class="summary-row total-row"><span>Total</span><span>₹24,999</span></div>
                         </div>
-                        <a href="#payment-view" class="pay-btn-link">Pay Now ₹24,999</a>
+
+
+
+
+                        <button class="pay-now-btn" onclick="navigateTo('payment')">Pay Now ₹24,999</button>
                         <div class="trust-icons">
                             <img src="https://img.icons8.com/color/48/secured-letter.png" alt="Secure" width="24">
-                            <span>Razorpay Payments</span>
+                            <span>Razorpay</span>
                             <img src="https://img.icons8.com/color/48/shield.png" alt="Trust" width="24">
                         </div>
+
+
+
+
                     </div>
                 </div>
             </div>
         </section>
 
-        
+
+    
         <section id="payment-view" class="view-section">
             <div class="payment-grid">
+            
                 <div class="payment-left">
                     <h2 class="checkout-sub">Checkout</h2>
                     
@@ -230,22 +268,29 @@
                         <h3>Contact Details</h3>
                         <div class="input-group">
                             <label for="email">Email ID</label>
-                            <input type="email" id="email" placeholder="example@domain.com" required>
+                            <input type="email" id="email" placeholder="example@domain.com">
                         </div>
                     </div>
 
                     <div class="payment-card">
                         <h3>Payment Options</h3>
+
+
+
+
                         <div class="payment-methods">
-                            <div class="method-btn active"><i class="fa-regular fa-credit-card"></i> Cards</div>
-                            <div class="method-btn"><i class="fa-brands fa-ethereum"></i> Crypto</div>
-                            <div class="method-btn"><i class="fa-solid fa-building-columns"></i> Bank</div>
+                            <button class="method-btn active"><i class="fa-regular fa-credit-card"></i> Cards</button>
+                            <button class="method-btn"><i class="fa-brands fa-ethereum"></i> Crypto</button>
+                            <button class="method-btn"><i class="fa-solid fa-building-columns"></i> Bank</button>
                         </div>
                         <div class="card-inputs">
                             <div class="input-group">
                                 <label for="card-num">Card Number</label>
                                 <input type="text" id="card-num" placeholder="1234 5678 9101 1121">
                             </div>
+
+
+
                             <div class="row-inputs">
                                 <div class="input-group">
                                     <label for="expiry">Expiry Date</label>
@@ -256,6 +301,9 @@
                                     <input type="password" id="cvv" placeholder="•••">
                                 </div>
                             </div>
+
+
+
                             <div class="row-inputs">
                                 <div class="input-group">
                                     <label for="country">Country</label>
@@ -270,9 +318,13 @@
                     </div>
                 </div>
 
+            
                 <div class="payment-right">
                     <h2>Order Summary</h2>
                     <div class="summary-card">
+
+
+
                         <label for="pay-coupon">Enter Coupon Code</label>
                         <div class="coupon-field">
                             <input type="text" id="pay-coupon" placeholder="COUPON CODE">
@@ -285,10 +337,14 @@
                             <hr>
                             <div class="summary-row total-row"><span>Total</span><span>₹24,999</span></div>
                         </div>
-                        <a href="#landing-view" class="pay-btn-link">Pay Now ₹24,999</a>
+
+
+
+
+                        <button class="pay-now-btn" onclick="alert('Payment Successful!')">Pay Now ₹24,999</button>
                         <div class="trust-icons">
                             <img src="https://img.icons8.com/color/48/shield.png" alt="Secure Shield" width="24">
-                            <span>Razorpay Secure Payments</span>
+                            <strong>Razorpay Secure Payments</strong>
                         </div>
                     </div>
                 </div>
@@ -296,5 +352,49 @@
         </section>
     </main>
 
+
+    <script>
+    
+        function navigateTo(viewId) {
+            
+            const sections = document.querySelectorAll('.view-section');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+        
+            const target = document.getElementById(viewId + '-view');
+            if (target) {
+                target.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        
+        function changeQty(amount) {
+            const qtyElement = document.getElementById('qty-value');
+            let currentQty = parseInt(qtyElement.innerText);
+            currentQty += amount;
+            if (currentQty < 1) currentQty = 1;
+            qtyElement.innerText = currentQty;
+        }
+
+        
+        function updateMainImage(src) {
+            document.getElementById('main-product-img').src = src;
+            
+    
+            const thumbs = document.querySelectorAll('.gallery-thumb');
+            thumbs.forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+    
+        const paymentMethods = document.querySelectorAll('.method-btn');
+        paymentMethods.forEach(btn => {
+            btn.addEventListener('click', () => {
+                paymentMethods.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
