@@ -5,7 +5,7 @@
     width: 100%;
     padding: 20px 50px;
     background-color: antiquewhite;
-    font-size: 40;
+    font-size: 40px;
     border-bottom: 1px solid #f0f0f0;
 }
 
@@ -71,14 +71,14 @@
     cursor: pointer;
     box-shadow: 0px 4px 15px rgba(28, 163, 255, 0.3);
     transform-origin:40% 70%;
-    transform:0.20s ease;
+    transition:0.20s ease;
     
 }
 
 
 .cta-btn:hover {
     background-color: #1588d9;
-    transform:rotate(-10deg)  ;
+    transform:rotate(-10deg);
 }
 .hero-right {
     display: inline-block;
@@ -108,68 +108,80 @@
     max-height: 80vh; 
     margin-top: 4vh;
 }
-.menu-checkbox{
-    display:none;
+
+
+
+
+
+
+
+.hamburger-btn {
+  display: none; 
+  background: none;
+
+
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-btn .bar {
+  display: block;
+  width: 25px;
+
+
+  height: 3px;
+  margin: 4px 0;
+
+
+  background-color: #333;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
 
-.hamburger-btn{
-    display:none;
-    margin-left:15px;
-    
-    cursor:pointer;
-    flex-direction:column;
-    gap:4px;
-}
-.hamburger-btn.bar{
-    width:25px;
-    height:3px;
-    background-color:#333;
-    border-radius:2px;
-    display:block;
-}
-
-
-@media(max-width:900px){
-    .hamburger-btn{
-        display:flex ;
-    }
-
-
-    html body .nav-links{
-        display:none;
-        position:fixed;
-        right:0;
-        top:0;
-
-        width:250px;
-        height:100vh;
-        background-color:#111111;
-        padding-top:100px;
-
-
-        z-index:1000;
-        float:none;
-        text-align:center;
-    }
-
-
-    html body .nav-links li{
-        display:block ;
-        width:100%;
-        margin:30px 0 ;
-    }
-    html body .nav-links li a{
-        color:#ffffff ;
-        font-size:20px;
-        text-decoration:none;
-        display:block;
-    }
-
-
-     html body .menu-checkbox:checked~ .nav-links{
-       display:block;
-    }
+@media (max-width: 768px) {
+  
+  
+  .hamburger-btn {
+    display: block; 
   }
 
+  .nav-links {
+    
+    display: none; 
+    
+    
+    position: absolute; 
+    top: 60px;
+    
+
+    right: -250px; 
+    width: 250px;
+    height: 100vh;
+
+
+    background-color: #f8f9fa;
+    padding: 20px;
+    flex-direction: column;
+    
+    
+    transition: right 0.3s ease-in-out; 
+  }
+
+  .nav-links li {
+    margin-bottom: 15px;
+  }
+
+  
+  .hamburger-btn:focus + .nav-links,
+  .nav-links:focus-within {
+    display: flex; 
+    
+    right: 0; 
+  }
+}
   
