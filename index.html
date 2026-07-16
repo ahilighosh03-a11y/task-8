@@ -3,47 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>task8</title>
-
-<link rel="stylesheet" href="li.css">
+    <title>Thala 7 - Sneaker Store</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="11.css">
 </head>
 <body>
-    <header>
-      <nav class="navbar">
-    <div class="nav-logo">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/023/654/784/small/golden-logo-template-free-png.png" alt="logo">
-    </div>
-    <div class="nav-user">
-        <button class="username-btn">Username</button>
-        <button class="hamburger-btn" tabindex="0" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-    </div>
-    </nav>
+
+
+    <header class="navbar">
+        <a href="#landing-view" class="nav-logo">
+            <span>Thala 7<span class="dot">.</span></span></a>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#landing-view">Home</a></li>
+                <li><a href="#product-view">Shop</a></li>
+                <li><a href="#cart-view">Cart</a></li>
+                <li><a href="#payment-view">Checkout</a></li>
+            </ul>
+
+
+        </nav>
+        <div class="nav-actions">
+            <i class="fa-solid fa-magnifying-glass action-icon"></i>
+            <a href="#cart-view" class="cart-icon-container">
+                <i class="fa-solid fa-bag-shopping action-icon"></i>
+                <span class="cart-count">3</span>
+            </a>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=60" alt="Profile" class="profile-pic">
+        </div>
     </header>
 
-    <section class="hero">
+    <main>
+        
+        <section id="landing-view" class="view-section">
+            <div class="hero-section">
+                <div class="hero-left">
+                    <span class="brand-sub">S E V E N</span>
+                    <h1>7!! Thala For<br>a <span class="highlight">Reason!</span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur. Pretium quisque lorem feugiat justo at ut orci nisi. Designed to provide unmatched agility and athletic precision.</p>
+                    <a href="#product-view" class="cta-btn">Shop Now</a>
+                </div>
 
-        <div class="hero-left">
-            <h1>Revitalize Your <br>Clothes with Expert <br><span class="highlight">Laundry Services!</span></h1>
-            <p>From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
-            <button class="cta-btn">Book a service today!</button>
-        </div>
 
-        <div class="hero-right">
-         
-            <img src="https://static.vecteezy.com/system/resources/previews/048/778/819/non_2x/cartoon-of-blue-washing-machine-with-outline-style-free-vector.jpg">
-        </div>
-    </section>
+                <div class="hero-right">
+                    <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&auto=format&fit=crop&q=80" alt="Featured Sneaker" class="hero-sneaker">
+                    <div class="badge-icon">A</div>
+                </div>
+            </div>
+            
+            <div class="service-overview">
+                <div class="service-container">
+                    <div class="service-item">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <div>
+                            <h3>2k+</h3>
+                            <p>Reviews</p>
+                        </div>
+                    </div>
+
+
+                    <div class="service-item">
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <h3>30k+</h3>
+                            <p>Customers</p>
+                        </div>
+                    </div>
+
+
+                    <div class="service-item">
+                        <i class="fa-regular fa-star"></i>
+                        <div>
+                            <h3>High</h3>
+                            <p>Quality</p>
+                        </div>
+                     </div>
+
+
+                    <div class="service-item">
+                        <i class="fa-solid fa-ranking-star"></i>
+                        <div>
+                            <h3>4.5/5</h3>
+                            <p>Rating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="product-view" class="view-section">
+            <div class="product-container">
+                <div class="product-left">
+                    <div class="main-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600&auto=format&fit=crop&q=80" alt="Main Sneaker Display">
+                    </div>
+                </div>
+
+
+                <div class="product-right">
+                    <nav class="breadcrumb">Home > THALA FOR A REASON > Seven By M.S.Dhoni</nav>
+                    <h1 class="product-title">Seven By M.S.Dhoni Women's Hogun Multi-Color Running Shoes</h1>
+                    <p class="product-desc">For exceptional fit, feel, and smooth transitions get going with these dual mid sole technology shoes constructed with molded EVS sock liner, gel at heel area, rubber outsole, fused upper, and breathable build.</p>
+                    
+                    <div class="price-container">
+                        <span class="price">₹1,334</span>
+                        <span class="discount-tag">Save 12%</span>
+                    </div>
+                    <p class="taxes-label">Inclusive of all Taxes</p>
+
+                    <div class="purchase-actions">
+                        <div class="quantity-selector">
+                            <a href="#" class="qty-btn">-</a>
+                            <span>2</span>
+                            <a href="#" class="qty-btn">+</a>
+                        </div>
+                        <a href="#cart-view" class="add-to-cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i> ADD TO CART
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="bottom-gallery-section">
+                <h3>More Views</h3>
+                <div class="scrolling-container">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=300&auto=format&fit=crop&q=60" alt="View 1" class="gallery-thumb active">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&auto=format&fit=crop&q=60" alt="View 2" class="gallery-thumb">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=300&auto=format&fit=crop&q=60" alt="View 3" class="gallery-thumb">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=300&auto=format&fit=crop&q=60" alt="View 4" class="gallery-thumb">
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="cart-view" class="view-section">
+            <h1 class="section-title">Shopping Cart</h1>
+            <div class="cart-grid">
+                <div class="cart-left">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=100&auto=format&fit=crop&q=60" alt="Cart item">
+                                    <span>Seven By M.S.Dhoni W...</span>
+                                </td>
+                                <td>
+                                    <div class="table-qty">
+                                        <a href="#" class="qty-btn">-</a>
+                                        <span>1</span>
+                                        <a href="#" class="qty-btn">+</a>
+                                    </div>
+                                </td>
+                                <td class="table-price">₹4,999</td>
+                                <td><i class="fa-solid fa-xmark remove-icon"></i></td>
+                            </tr>
+                            <tr>
+                                <td class="product-cell">
+                                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=100&auto=format&fit=crop&q=60" alt="Cart item">
+                                    <span>Seven By M.S.Dhoni W...</span>
+                                </td>
+                                <td>
+                                    <div class="table-qty">
+                                        <a href="#" class="qty-btn">-</a>
+                                        <span>1</span>
+                                        <a href="#" class="qty-btn">+</a>
+                                    </div>
+                                </td>
+                                <td class="table-price">₹4,999</td>
+                                <td><i class="fa-solid fa-xmark remove-icon"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom-container">
+                        <a href="#product-view" class="continue-shopping">
+                            <i class="fa-solid fa-chevron-left"></i> Continue Shopping
+                        </a>
+                    </div>
+                </div>
+
+                <div class="cart-right">
+                    <div class="summary-card">
+                        <label for="cart-coupon">Enter Coupon Code</label>
+                        <div class="coupon-field">
+                            <input type="text" id="cart-coupon" placeholder="COUPON CODE">
+                            <button class="apply-coupon-btn">Apply Coupon</button>
+                        </div>
+                        <div class="summary-rows">
+                            <div class="summary-row"><span>Sub Total</span><span>₹24,700</span></div>
+                            <div class="summary-row"><span>Taxes (if applicable)</span><span>₹199</span></div>
+                            <div class="summary-row"><span>Discount</span><span>₹0</span></div>
+                            <hr>
+                            <div class="summary-row total-row"><span>Total</span><span>₹24,999</span></div>
+                        </div>
+                        <a href="#payment-view" class="pay-btn-link">Pay Now ₹24,999</a>
+                        <div class="trust-icons">
+                            <img src="https://img.icons8.com/color/48/secured-letter.png" alt="Secure" width="24">
+                            <span>Razorpay Payments</span>
+                            <img src="https://img.icons8.com/color/48/shield.png" alt="Trust" width="24">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="payment-view" class="view-section">
+            <div class="payment-grid">
+                <div class="payment-left">
+                    <h2 class="checkout-sub">Checkout</h2>
+                    
+                    <div class="contact-details-box">
+                        <h3>Contact Details</h3>
+                        <div class="input-group">
+                            <label for="email">Email ID</label>
+                            <input type="email" id="email" placeholder="example@domain.com" required>
+                        </div>
+                    </div>
+
+                    <div class="payment-card">
+                        <h3>Payment Options</h3>
+                        <div class="payment-methods">
+                            <div class="method-btn active"><i class="fa-regular fa-credit-card"></i> Cards</div>
+                            <div class="method-btn"><i class="fa-brands fa-ethereum"></i> Crypto</div>
+                            <div class="method-btn"><i class="fa-solid fa-building-columns"></i> Bank</div>
+                        </div>
+                        <div class="card-inputs">
+                            <div class="input-group">
+                                <label for="card-num">Card Number</label>
+                                <input type="text" id="card-num" placeholder="1234 5678 9101 1121">
+                            </div>
+                            <div class="row-inputs">
+                                <div class="input-group">
+                                    <label for="expiry">Expiry Date</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY">
+                                </div>
+                                <div class="input-group">
+                                    <label for="cvv">CVV</label>
+                                    <input type="password" id="cvv" placeholder="•••">
+                                </div>
+                            </div>
+                            <div class="row-inputs">
+                                <div class="input-group">
+                                    <label for="country">Country</label>
+                                    <input type="text" id="country" placeholder="India">
+                                </div>
+                                <div class="input-group">
+                                    <label for="zip">Zip Code</label>
+                                    <input type="text" id="zip" placeholder="700001">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-right">
+                    <h2>Order Summary</h2>
+                    <div class="summary-card">
+                        <label for="pay-coupon">Enter Coupon Code</label>
+                        <div class="coupon-field">
+                            <input type="text" id="pay-coupon" placeholder="COUPON CODE">
+                            <button class="apply-coupon-btn">Apply Coupon</button>
+                        </div>
+                        <div class="summary-rows">
+                            <div class="summary-row"><span>Sub Total</span><span>₹24,700</span></div>
+                            <div class="summary-row"><span>Taxes</span><span>₹199</span></div>
+                            <div class="summary-row"><span>Discount</span><span>₹0</span></div>
+                            <hr>
+                            <div class="summary-row total-row"><span>Total</span><span>₹24,999</span></div>
+                        </div>
+                        <a href="#landing-view" class="pay-btn-link">Pay Now ₹24,999</a>
+                        <div class="trust-icons">
+                            <img src="https://img.icons8.com/color/48/shield.png" alt="Secure Shield" width="24">
+                            <span>Razorpay Secure Payments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
 </body>
 </html>
-
